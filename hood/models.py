@@ -62,3 +62,6 @@ class Authorities(models.Model):
     name = models.CharField(max_length=40)
     NeighbourHood = models.ForeignKey(NeighbourHood, on_delete=models.CASCADE)
     contacts = models.IntegerField()
+
+    def __str__(self):
+        return self.name
