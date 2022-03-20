@@ -19,8 +19,7 @@ class NeighbourHood(models.Model):
 
 
 class Profile(models.Model):
-    user = models.OneToOneField(
-        User, on_delete=models.CASCADE, related_name='profile')
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
     name = models.CharField(max_length=50, blank=True)
     bio = models.TextField(max_length=80, blank=True)
     profile_picture = models.ImageField(
