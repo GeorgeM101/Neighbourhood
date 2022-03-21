@@ -1,18 +1,9 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
-<div class="container-fluid" style="width: 100%; margin: 0; padding: 0">
-  <img
-    alt="IG"
-    src="https://images.pexels.com/photos/744672/pexels-photo-744672.jpeg?cs=srgb&dl=pexels-rakicevic-nenad-744672.jpg&fm=jpg"
-    height="300"
-    class="img-fluid"
-  />
-
-  <div
-    class="position-absolute top-50 start-50 translate-middle"
-    style="font-size: 5rem; color: white; font-family: 'Rubik Beastly', cursive"
-  >
-    The Hood
+<div class="container">
+  <div class="text-white text-center" style="margin-top: 15%">
+    <h1>Welcome to THE HOOD</h1>
+    <h5 style="margin-top: 6%">Get Started by joining a hood today</h5>
+    <a href="{% url 'hood' %}" class="btn btn-sm btn-info mt-4">Join Hood</a>
   </div>
 </div>
-
 {% endblock %}
