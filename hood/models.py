@@ -54,12 +54,12 @@ class Post(models.Model):
     title = models.CharField(max_length=30)
     image = models.ImageField(upload_to='posts/')
     username = models.ForeignKey(User, on_delete=models.CASCADE)
-    date_posted = models.DateTimeField
+    date_posted = models.DateTimeField(auto_now_add=True)
 
 
 class Authorities(models.Model):
     name = models.CharField(max_length=40)
-    NeighbourHood = models.ForeignKey(NeighbourHood, on_delete=models.CASCADE)
+    Neighbourhood = models.ForeignKey(NeighbourHood, on_delete=models.CASCADE)
     contacts = models.IntegerField()
 
     def __str__(self):
