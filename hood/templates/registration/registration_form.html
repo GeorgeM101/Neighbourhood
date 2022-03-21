@@ -1,0 +1,68 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+{% block content %} 
+<div class="container d-flex justify-content-center my-5">
+    <div style="font-family:font-family: 'Architects Daughter', cursive;font-size:1.5rem">
+        <div class="border" style="width: 380px; height: 450px;">
+            <h4 class="text-center my-2" style="font-family: 'Shadows Into Light', cursive;">Sign Up</h4>
+            {% if messages %}
+            <div class="messages me-5">
+                {% for message in messages %}
+                <h4 {% if message.tags %} class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</h4>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <form class="px-4 py-3" method="POST" action="">
+                {% csrf_token %}
+            <!-- Username input -->
+            <div class="form-outline my-3">
+                <input name="username" type="Username" id="form2Example1" class="form-control" />
+                <label class="form-label" for="form2Example1">Username</label>
+            </div>
+
+            <!-- Email input -->
+            <div class="form-outline my-3">
+                <input name="email" type="email" id="form2Example1" class="form-control" />
+                <label class="form-label" for="form2Example1">Email</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline my-3">
+                <input name="password" type="password" id="typePassword" class="form-control" />
+                <label class="form-label" for="typePassword">Password</label>
+            </div>
+
+            <!-- Confirm_Password -->
+            <div class="form-outline">
+                <input name="confirm_password" type="Password" id="typeConfirm_Password" class="form-control" />
+                <label class="form-label" for="typeConfirm_Password">Confirm_Password</label>
+            </div>
+                    
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-success btn-block mt-3">Sign In</button>
+            
+            <!-- 2 column grid layout for inline styling -->
+            <div class="my-2 text-center">
+                <div class='or mt-1 d-flex'>
+                <div class='mt-2' style="height:1px; width:100%; background-color:rgb(195, 195, 195);"></div><p class='mx-2' style="font-size:15px;">OR</p><div class='mt-2 ' style="height:1px; width:100%; background-color:rgb(195, 195, 195);"></div>
+                </div>
+                <div class="py-2">
+                <!-- Simple link -->
+                <a href="#!"><small> Forgot password?</small></a>
+                </div>
+            </div>
+            </form>
+
+            </div>
+            <div class="border my-2 text-center pt-2" style="width: 375px; height:50px;">
+                <small> Already have an account?<a href="/login">Login</a></small>
+            </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div> 
+{% endblock %} 
