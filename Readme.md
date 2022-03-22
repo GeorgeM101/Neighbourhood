@@ -13,10 +13,10 @@ Run migrations using these respective commmands python3.8 manage.py makemigratio
 Run the app using this command python3.8 manage.py runserver on the terminal.You can then open the app on your browser.
 
 ### Technologies Used
-Django 3.0.8 - The web framework used
-Heroku - Deployment platform
-Python3.8 - Backend logic
-Postresql - Database system
+* Django 3.0.8 - The web framework used
+* Heroku - Deployment platform
+* Python3.8 - Backend logic
+* Postresql - Database system
 
 ### Developer Details
 
