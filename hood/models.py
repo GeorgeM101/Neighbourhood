@@ -8,8 +8,8 @@ class NeighbourHood(models.Model):
     admin = models.ForeignKey(
         "Profile", on_delete=models.CASCADE, related_name='hood')
     description = models.TextField()
-    health_contact = models.IntegerField(null=True, blank=True)
-    police_contact = models.IntegerField(null=True, blank=True)
+    health_contact = models.CharField(max_length=20,null=True, blank=True)
+    police_contact = models.CharField(max_length=20,null=True, blank=True)
 
     def create_neighborhood(self):
         self.save()
