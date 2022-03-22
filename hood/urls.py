@@ -9,5 +9,8 @@ urlpatterns = [
     path('account/', include('django.contrib.auth.urls')),
     path('all-hoods/', views.hoods, name='hood'),
     path('new-hood/', views.create_hood, name='new-hood'),
+    path('profile/<username>', views.profile, name='profile'),
+    path('profile/<username>/edit/', views.update, name='edit-profile'),
+
 
 ]

@@ -49,3 +49,18 @@ def create_hood(request):
     else:
         form = NeighbourHoodForm()
     return render(request, 'newhood.html', {'form': form})
+
+def profile(request, username):
+    return render(request, 'profile.html') 
+
+
+def update(request, username):
+    user = User.objects.get(username=username)
+    if request.method == 'POST':
+        form = UpdateProfileForm(request.POST, request.FILES, instance=request.user.profile)
+        if form.is_valid():
+            form.save()
+            return redirect('profile', user.username)
+    else:
+        form = UpdateProfileForm(instance=request.user.profile)
+    return render(request, 'update.html', {'form': form}) 
