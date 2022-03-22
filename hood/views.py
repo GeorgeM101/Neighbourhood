@@ -112,4 +112,10 @@ def single_hood(request, hood_id):
         'form': form,
         'posts': posts
     }
-    return render(request, 'single_hood.html', params) 
+    return render(request, 'single_hood.html', params)
+    
+def leave_hood(request, id):
+    hood = get_object_or_404(NeighbourHood, id=id)
+    request.user.profile.neighbourhood = None
+    request.user.profile.save()
+    return redirect('hood') 
