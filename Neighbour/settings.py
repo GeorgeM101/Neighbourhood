@@ -55,7 +55,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 SECRET_KEY = 'django-insecure-7)2yk-kw@zd$-ih_)ryou7n8bkkdwt_wwmae*l(#1gxiubdtgt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
